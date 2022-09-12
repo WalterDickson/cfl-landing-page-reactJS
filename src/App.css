@@ -13,15 +13,33 @@
   }
 }
 
-.App-header {
+.header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+@media only screen and (min-width: 800px) {
+  #footer {
+    overflow: auto;
+  }
+}
+
+#footer {
+    background-color: #202020;
+    text-align: center;
+    color: white;
+    padding: 2.5%;
+    border-top: 1px solid white;
+}
+
+.box {
+  color: lightgreen;
 }
 
 .App-link {
@@ -34,5 +52,449 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Navigation Bar */
+/* Add a black background color to the top navigation */
+.topnav {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: static;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #FFA756;
+  color: white;
+}
+
+/* #fp-content */
+/* in order from top to bottom, outer layer to inner */
+
+#fp-content {
+  background-color: white;
+  overflow: auto;
+  padding: 5%;
+}
+
+
+.fp-single {
+  width: 100%;
+  float: left;
+  background: black;
+  margin-top: 5%; margin-right: 0px; margin-bottom: 5%; margin-left: 0px;
+  overflow: auto;
+  animation: slideIn 60s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+.fp-double {
+  width: 100%;
+  float: left;
+  overflow: auto;
+  margin: 5% 0 5% 0;
+  background-color: white;
+  animation: slideIn 60s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+.fp-double a, .fp-double b {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 800px) {
+  .fp-double-a {
+    float: left;
+    width: 47.5%;
+    margin: 2.5%, 2.5%, 0, 0;
+    padding: 2.5%;
+    background-color: white;
+}
+}
+
+@media only screen and (min-width: 800px) {
+.fp-double-b {
+  float: left;
+  width: 47.5%;
+  margin: 2.5% 0 0 2.5%;
+  background-color: white;
+  padding: 2.5%;
+}
+}
+
+body {
+  background: slategray;
+  width: 100%;
+}
+
+/* #stl-example */
+
+#stl-example {
+  background: #FFA756;
+  border-color: #202020;
+  border-style: double;
+  border-radius: 16px;
+  color: white;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+#stl-example .fp-single {
+  width: 100%;
+  float: left;
+  background: black;
+  margin-top: 5%; margin-right: 0px; margin-bottom: 5%; margin-left: 0px;
+  overflow: auto;
+  animation: slideIn 60s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+/* Custom Loading bar */
+
+/* #mission */
+
+#mission {
+  background-color: #202020;
+  border-radius: 5px;
+  color: white;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+#mission .fp-double-a {
+  background-color: transparent;
+  padding: 2.5% 0 0 0;
+}
+
+#mission .fp-double-b {
+  background-color: transparent;
+  padding: 2.5% 0 0 0;
+}
+
+#mission .fp-double a, .fp-double b {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 800px) {
+  #mission .fp-double-a {
+    float: left;
+    width: 47.5%;
+    margin: 2.5%, 2.5%, 0, 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+#mission .fp-double-b {
+  float: left;
+  width: 47.5%;
+  margin: 2.5% 0 0 2.5%;
+  }
+}
+
+/* end of #mission */ 
+
+/*  */
+
+
+
+.slide.dark {
+  background: black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide {
+    animation: slideIn infinite 20s linear;
+  }
+}
+
+.page {
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 960px;
+
+  border-radius: 3px;
+  padding: 20px;
+  width: 60px;
+  margin: 40px auto;
+  counter-reset: items;
+}
+
+.mycontainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+
+.myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px; 
+  border: 2px solid black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#imgStyle {
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 2.5%;
+}
+.front-page-title {
+  text-align: center;
+  margin: 0;
+}
+
+.front-page-description {
+  text-align: center;
+  margin: 0;
+}
+
+.front-page-test-text {
+  text-align: center;
+}
+
+.video-container {
+  display: block;
+  align-content: center;
+  border-radius: 3px;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  counter-reset: items;
+}
+
+.video-responsive {
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 315px;
+  width: 100%;
+  position: relative;
+}
+
+
+
+#about-slide {
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #202020;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+#about-slide .fp-double-a, .fp-double-b {
+  box-sizing: border-box;
+}
+
+#about-slide .fp-double-a {
+  border: 8px solid #202020;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+#about-slide .fp-double-b {
+  background-color: #FFA756;
+  border-radius: 5px;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 800px) {
+  #about-slide .fp-double-a {
+    float: left;
+    width: 47.5%;
+    margin: 2.5% 2.5% 0 0;
+    padding: 2.5%;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #about-slide .fp-double-b {
+    border: 8px solid #FFA756;
+    float: left;
+    width: 47.5%;
+    margin: 2.5% 0 0 2.5%;
+    padding: 2.5%;
+  }
+}
+
+hr {
+  border: 2px solid #202020;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.issues {
+  padding: auto;
+}
+
+.issues span {
+  background-color: #202020;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.solutions {
+  padding: auto;
+}
+
+.solutions span {
+  background-color: white;
+  color: #202020;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.issues, .solutions {
+  margin: 30px 0 30px 0;
+  text-align: center;
+}
+
+#map-slide {
+  padding: 2.5%;
+  background-color: #FFA756;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#map-slide .fp-single {
+  background-color: #FFA756;
+  width: 100%;
+  float: left;
+  background: black;
+  margin-top: 5%; margin-right: 0px; margin-bottom: 5%; margin-left: 0px;
+  overflow: auto;
+  animation: slideIn 60s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+@media only screen and (min-width: 800px) {
+  #map-slide .fp-single {
+    margin: 2.5% 0 2.5% 0; 
+  }
+}
+
+#get-involved {
+  padding: 2.5%;
+  background-color: #FFA756;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#get-involved .fp-single {
+  background-color: #FFA756;
+  width: 100%;
+  float: left;
+  background: black;
+  margin-top: 5%; margin-right: 0px; margin-bottom: 5%; margin-left: 0px;
+  overflow: auto;
+  animation: slideIn 60s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+@media only screen and (min-width: 800px) {
+  #get-involved .fp-single {
+    margin: 2.5% 0 2.5% 0; 
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #get-involved button {
+    float: left;
+    width: 40%;
+    margin: 2.5% 5% 2.5% 5%;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+button {
+    background-color: #202020;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    margin: 2.5% 0 2.5% 0;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+@media only screen and (min-width: 800px) {
+  #footer-info {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
   }
 }
